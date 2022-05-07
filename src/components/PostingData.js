@@ -18,10 +18,10 @@ const PostingData = () => {
             body: body
         }
         console.log(input);
-
+        
         const { data, error, loading } = usePost('posts', input);
     
-        
+        alert("Your file is being uploaded!")
         if (loading) {
             return <Loading />;
         }

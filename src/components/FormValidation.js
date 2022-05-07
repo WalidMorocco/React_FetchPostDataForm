@@ -4,7 +4,7 @@ import Loading from './Loading';
 import UsePost from '../hooks/usePost';
 import useFetch from '../hooks/useFetch';
 
-const PostingData = () => {
+const FormValidation = () => {
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');

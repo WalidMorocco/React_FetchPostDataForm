@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 const baseUrl = 'http://localhost:3000/';
 
@@ -24,15 +24,18 @@ function usePost(url, input) {
   
     // return { data, loading, error };
 
-    const [data, setData] = useState(null);
+
+    const [data, setData] = useState(input);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(true);
+    alert("Your file is being uploaded!")
     useEffect(() => {
     (async () => {
+        
         try {
         const response = await axios.post(
-            url,
-            input
+            `${baseUrl}${url}`,
+            data
         );
         setData(response.data);
         } catch (error) {
